@@ -1,8 +1,11 @@
 {
   "name": "chai-aur-backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,5 +17,8 @@
   ],
   "author": "Varun Pal Singh",
   "license": "ISC",
-  "description": "Chai aur backend"
+  "description": "Chai aur backend",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
