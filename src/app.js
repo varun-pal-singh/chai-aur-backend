@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import { CORS_ORIGIN } from "../config";
+import { CORS_ORIGIN } from "../config.js";
 
 const app = express();
 
@@ -26,5 +26,11 @@ app.use(express.static("public"));
 
 // for reading user's browser cookie
 app.use(cookieParser());
+
+// routes import
+import userRouter from "./routes/user.routes.js";
+
+// routes declaration
+app.use("/api/v1/users", userRouter);
 
 export default app;
